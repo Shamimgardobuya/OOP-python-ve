@@ -32,6 +32,7 @@
    
     
     
+from cmath import sqrt
 from inspect import Parameter
 
 
@@ -75,8 +76,20 @@ class Sphere:
         return f"{area}msq is the area of  sphere"
     def sphere_vol(self):
         pi=3.142
-        volume=4/3*pi*self.radius*self.radius*self.radius
+        volume=4/3*pi*self.radius*self.radius*self.radius   #we can use  3asterix 
         return f"{volume}m3  is the volume of sphere"
+class Cone:
+    def __init__(self,radius,height):
+        self.radius=radius
+        self.height=height
+    def area(self):
+        z=3.142*self.radius
+        arear=self.height*self.height*self.radius*self.radius
+        root=self.radius +sqrt(arear)
+        final=z*root
+        return f"{final} is the area of your cone"
+        
+    
     
         
     
